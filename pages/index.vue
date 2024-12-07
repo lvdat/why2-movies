@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Phim Mới Cập Nhật</h1>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
             <MovieCard
                 v-for="movie in movies"
                 :key="movie._id"

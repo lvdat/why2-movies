@@ -4,7 +4,7 @@ export const getNewMovies = async (page = 1) => {
     return await $fetch(`${apiBase}/danh-sach/phim-moi-cap-nhat?page=${page}`)
 }
 
-export const getMovieBySlug = async (slug: string | string[]) => {
+export const w = async (slug: string | string[]) => {
     const config = useRuntimeConfig()
     const apiBase = config.public.apiBase
     return await $fetch(`${apiBase}/phim/${slug}`)

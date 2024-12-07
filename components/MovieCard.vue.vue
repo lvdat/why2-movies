@@ -1,5 +1,8 @@
 <template>
-    <div class="border p-2 rounded shadow hover:shadow-lg">
+    <nuxt-link
+        :to="`/phim-${movie.slug}`"
+        class="border p-2 rounded shadow hover:shadow-lg hover:cursor-pointer"
+    >
         <img
             :src="`${correctThumbUrl(movie.thumb_url)}`"
             alt="Thumbnail"
@@ -11,7 +14,7 @@
             <p class="text-sm text-gray-500">Năm: {{ movie.year }}</p>
             <p class="text-sm text-gray-500">Thời lượng: {{ movie.time }}</p>
         </div>
-    </div>
+    </nuxt-link>
 </template>
 <script setup>
 defineProps(['movie'])

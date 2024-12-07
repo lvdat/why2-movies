@@ -11,7 +11,7 @@
         </div>
         <div
             v-if="movies.length > 0"
-            class="grid grid-cols-2 md:grid-cols-4 gap-4"
+            class="grid grid-cols-2 md:grid-cols-5 gap-4"
         >
             <MovieCard
                 v-for="movie in movies"
