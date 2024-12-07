@@ -22,10 +22,49 @@
             </div>
 
             <!-- Movie Info -->
+            <!-- Movie Info -->
             <div class="info w-full lg:w-2/3">
                 <h1 class="text-3xl font-bold mb-2">
-                    {{ movie.name || 'Tên phim chưa có' }}
+                    {{ movie.name + ' ' + currentEp.name || 'Tên phim chưa có' }}
                 </h1>
+                <p class="italic text-gray-600 mb-4">
+                    {{ movie.origin_name || 'Đang cập nhật' }}
+                </p>
+                <p class="text-gray-800">
+                    {{ movie.content || 'Mô tả chưa có' }}
+                </p>
+                <ul class="mt-4 space-y-2">
+                    <li>
+                        <strong>Thể loại:</strong>
+                        {{
+                            movie.category?.map((c) => c.name).join(', ') ||
+                            'Đang cập nhật'
+                        }}
+                    </li>
+                    <li>
+                        <strong>Quốc gia:</strong>
+                        {{
+                            movie.country?.map((c) => c.name).join(', ') ||
+                            'Đang cập nhật'
+                        }}
+                    </li>
+                    <li>
+                        <strong>Trạng thái:</strong>
+                        {{ movie.status || 'Đang cập nhật' }}
+                    </li>
+                    <li>
+                        <strong>Năm:</strong>
+                        {{ movie.year || 'Đang cập nhật' }}
+                    </li>
+                    <li>
+                        <strong>Diễn viên:</strong>
+                        {{ movie.actor?.join(', ') || 'Đang cập nhật' }}
+                    </li>
+                    <li>
+                        <strong>Đạo diễn:</strong>
+                        {{ movie.director?.join(', ') || 'Đang cập nhật' }}
+                    </li>
+                </ul>
             </div>
         </div>
 
