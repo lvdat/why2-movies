@@ -1,7 +1,7 @@
 <template>
     <div class="border p-2 rounded shadow hover:shadow-lg">
         <img
-            :src="`${movie.thumb_url}`"
+            :src="`${correctThumbUrl(movie.thumb_url)}`"
             alt="Thumbnail"
             class="w-full h-48 object-cover rounded"
         />
